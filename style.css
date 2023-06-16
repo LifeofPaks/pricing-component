@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --Linear-Gradient: linear-gradient(to right, hsl(237, 63%, 64%),hsl(236, 72%, 79%)); 
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%)  ;
+}
+
+body{
+    background-color: var(--Very-Light-Grayish-Blue);
+    background-image: url(images/bg-bottom.svg), url(images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: 0 100%, 100% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    font-weight: bold;
+}
+
+span{
+    display: block;
+}
+
+button{
+    outline: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+    width: 100%;
+    padding-block: .9rem;
+}
+
+.primary-btn{
+    color: #fff;
+    background: var(--Linear-Gradient);
+    border: 1px solid  hsl(236, 72%, 79%);
+    transition: .3s;
+}
+
+.primary-btn:hover{
+    background: transparent;
+    color: hsl(237, 63%, 64%);
+}
+
+.secondary-btn{
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid #fff;
+    transition: .3s;
+}
+
+.secondary-btn:hover{
+    background: transparent;    
+    color: #fff;
+}
+
+
+.container{
+    padding: 5% 0;
+}
+
+/* ==================================HEADER====================================== */
+
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 3rem;
+}
+
+.title{
+    color: var(--Grayish-Blue);
+    font-size: 2rem;
+}
+
+.duration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.duration p{
+    color: var(--Light-Grayish-Blue);
+    letter-spacing: .5px;
+    font-size: 14px;
+}
+
+.toggler{
+    width: 40px;
+    background: var(--Linear-Gradient);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.toggler:hover{
+    opacity: .5;
+}
+
+.toggler.active{
+    padding-left: 19px;
+}
+
+.thumb{
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+/* ====================================CARD======================================== */
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    padding: 2rem;
+    text-align: center;
+    width: 350px;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.card-title{
+    color: var(--Grayish-Blue);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+.amount-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Dark-Grayish-Blue);
+    gap: .2rem;
+    margin-bottom: 1.2rem;
+}
+
+.amount-box span{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.amount{
+    font-size: 3.8rem;
+}
+
+.detail-box{
+    border-top: 1px solid var(--Very-Light-Grayish-Blue);
+    border-bottom: 1px solid var(--Very-Light-Grayish-Blue);
+}
+
+.detail-box p:not(:last-child){
+    border-bottom: 1px solid var(--Very-Light-Grayish-Blue);
+}
+
+.detail-box p{
+    padding-block: 1rem;
+    color: var(--Grayish-Blue);
+}
+
+.basic{
+    border-radius: 1rem 0 0 1rem;
+}
+
+.master{
+    border-radius: 0 1rem 1rem 0; 
+}
+
+.pro{
+    padding-block: 3.5rem;
+    background: var(--Linear-Gradient);
+}
+
+.pro .card-title,
+.pro .amount-box,
+.pro .detail-box p{
+    color: #fff !important;
+}
+
+.pro .detail-box{
+    border-top: 1px solid var(--Light-Grayish-Blue);
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.pro .detail-box p:not(:last-child){
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+/*=================================REPONSIVE FOR SMALLER SCREEN==========================*/
+@media (max-width: 600px){
+
+    body{
+        background-image: url(images/bg-top.svg);
+        background-position: 250% 0;
+        background-size: 80%;
+    }
+
+    .container{
+        margin: 3rem 1rem;
+    }
+    .card-wrapper{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .card{
+        width: 350px;
+    }
+
+    .basic{
+        border-radius: 1rem 1rem 1rem 1rem;
+    }
+    
+    .master{
+        border-radius: 1rem 1rem 1rem 1rem; 
+    }
+}

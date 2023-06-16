@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Pricing component with toggle</title>
+
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- =======================================HEADER================================== -->
+
+    <header>
+      <h1 class="title">Our Pricing</h1>
+      <div class="duration">
+        <p class="annually">Annually</p>
+        <div class="toggler">
+          <span class="thumb"></span>
+        </div>
+        <p class="monthly">Monthly</p>
+      </div>
+    </header>
+
+
+    <!-- ========================================CARD================================== -->
+    <div class="card-wrapper">
+      <div class="basic card">
+        <p class="card-title">Basic</p>
+        <div class="amount-box">
+          <span>&dollar;</span>
+          <h2 class="amount basic-amount">199.99</h2>
+        </div>
+
+        <div class="detail-box">
+          <p class="storage">500 GB Storage</p>
+          <p class="allowed">2 Users Allowed</p>
+          <p class="send">Send up to 3 GB</p>
+        </div>
+
+        <button class="learn-more primary-btn">Learn More</button>
+      </div>
+
+      <div class="pro card">
+        <p class="card-title">Professional</p>
+        <div class="amount-box">
+          <span>&dollar;</span>
+          <h2 class="amount pro-amount">249.99</h2>
+        </div>
+
+        <div class="detail-box">
+          <p class="storage">1 TB Storage</p>
+          <p class="allowed">5 Users Allowed</p>
+          <p class="send">Send up to 10 GB</p>
+        </div>
+
+        <button class="learn-more secondary-btn">Learn More</button>
+      </div>
+
+      <div class="master card">
+        <p class="card-title">Master</p>
+        <div class="amount-box">
+          <span>&dollar;</span>
+          <h2 class="amount master-amount">399.99</h2>
+        </div>
+
+        <div class="detail-box">
+          <p class="storage">2 TB Storage</p>
+          <p class="allowed">5 Users Allowed</p>
+          <p class="send">Send up to 20 GB</p>
+        </div>
+
+        <button class="learn-more primary-btn">Learn More</button>
+      </div>
+
+    </div>
+
+  </main>
+
+   <script src="script.js"></script>
+</body>
+</html>
